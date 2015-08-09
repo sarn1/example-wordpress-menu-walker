@@ -1,0 +1,42 @@
+/*
+Theme Name: GlobaLiningGS
+Description: Custom theme for Global Lining GS
+Author: Webvolution LLC
+Author URI: http://www.webvolutionchicago.com
+Version: 2.0
+*/
+
+/*
+www.font2web.com
+http://everythingfonts.com/ttf-to-otf
+http://www.freefontconverter.com/
+@font-face {
+	font-family: 'HelveticaNeue';
+	src: url('includes/fonts/HelveticaNeue.eot');
+	src: local('â˜º'), url('includes/fonts/HelveticaNeue.woff') format('woff'), url('includes/fonts/HelveticaNeue.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'HelveticaNeueMedCond';
+	src: url('includes/fonts/HelveticaNeueLTStd-BlkCn.eot');
+	src: local('â˜º'), url('includes/fonts/HelveticaNeueLTStd-BlkCn.woff') format('woff'), url('includes/fonts/HelveticaNeueLTStd-BlkCn.ttf') format('truetype'), url('includes/fonts/HelveticaNeueLTStd-BlkCn.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HelveticaNeueBoldCond';
+	src: url('/includes/fonts/HelveticaNeueLTStd-BdCn.eot');
+	src: local('â˜º'), url('includes/fonts/HelveticaNeueLTStd-BdCn.woff') format('woff'), url('includes/fonts/HelveticaNeueLTStd-BdCn.ttf') format('truetype'), url('includes/fonts/HelveticaNeueLTStd-BdCn.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+*/
+
+a {
+	text-decoration:none;	
+}
+
+img {
+	border:none;	
+}
