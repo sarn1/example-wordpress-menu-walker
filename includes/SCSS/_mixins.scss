@@ -1,0 +1,21 @@
+/*
+===============
+mixins
+=============== */
+
+@mixin inline-block {
+  display:-moz-inline-stack;
+  display:inline-block;
+  zoom:1;
+  *display:inline;
+}
+
+@mixin gradient-bg {
+  background: #f8efe0;
+  background: -moz-linear-gradient(top, #f8efe0 0%, #d5a951 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f8efe0), color-stop(100%, #d5a951));
+  background: -webkit-linear-gradient(top, #f8efe0 0%, #d5a951 100%);
+  background: -o-linear-gradient(top, #f8efe0 0%, #d5a951 100%);
+  background: -ms-linear-gradient(top, #f8efe0 0%, #d5a951 100%);
+  background: linear-gradient(top, #f8efe0 0%, #d5a951 100%);
+}
