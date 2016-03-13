@@ -4,13 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7c494f5-7683-4fe6-9037-1b7d65ef0b21" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/includes/scss/theme-core.min.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.codekit" afterPath="$PROJECT_DIR$/config.codekit" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sidebar.php" afterPath="$PROJECT_DIR$/sidebar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="f7c494f5-7683-4fe6-9037-1b7d65ef0b21" name="Default" comment="" />
     <ignored path="Starter-Theme.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -148,8 +142,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="2158" />
-    <option name="y" value="273" />
+    <option name="x" value="1669" />
+    <option name="y" value="249" />
     <option name="width" value="1440" />
     <option name="height" value="808" />
   </component>
@@ -358,7 +352,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2158" y="273" width="1440" height="808" extended-state="0" />
+    <frame x="1669" y="249" width="1440" height="808" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
