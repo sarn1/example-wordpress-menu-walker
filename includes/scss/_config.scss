@@ -3,17 +3,28 @@
 config
 =============== */
 
-$max-width:				1190px;
-$font-color:			#ffffff;
+$max-width:				1270px;
+$font-color:			#666666;
+$link-color:            #6699cc;
+
+$primary-color:         #dbeab3; /* green */
+$secondary-color:       #cce5ff; /* blue */
+$ternary-color:         #f3dad0; /* red */
 
 $font-size:				16px;
 $line-height:			20px;
 
-$font-size-lg:          20px;
-$line-height-lg:        22px;
+$font-size-sm:			14px;
+$line-height-sm:		20px;
 
-$font-size-md:          18px;
+$font-size-md:          25px;
 $line-height-md:        20px;
 
-$font-size-sm:			14px;
-$line-height-sm:		16px;
+$font-size-lg:          32px;
+$line-height-lg:        38px;
+
+$font-size-xlg:         36px;
+$line-height-xlg:       38px;
+
+$font-stack:            'Raleway', Verdana, Geneva, sans-serif;
+$font-stack-2:          Arial, Helvetica, sans-serif;

@@ -1,0 +1,9 @@
+==========
+NOTES
+==========
+Starter Theme 2.1
+- 3rd party lib directory for organization
+- added box shadowing, debug, and img-responsive mixin
+- gitignore and notes files
+- updated normailize to 3.0.3 from 3.0.2
+- added bootstrap 3 mobile first media queries into _media_queries.scss

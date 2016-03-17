@@ -3,12 +3,35 @@
 Style
 =============== */
 
+._center {
+  text-align:center;
+}
+
 body {
-  a { color: #000;
+  font-family: $font-stack;
+
+  a {
+    color: $link-color;
   }
 
   h1 {
-    font-size: 12px;
-    color:#006699;
+    font-size: $font-size-lg;
+    line-height: $line-height-lg;
+  }
+
+  h2 {
+    font-size: $font-size-md;
+    line-height: $line-height-md;
+  }
+
+  img {
+    @include responsive-img;
+  }
+
+  #content_body {
+    max-width: $max-width;
+    margin: auto;
+
+    @include debug;
   }
 }

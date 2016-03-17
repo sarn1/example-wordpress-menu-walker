@@ -3,6 +3,16 @@
 mixins
 =============== */
 
+@mixin debug {
+  border: thin solid #1EAEDB;
+}
+
+@mixin box-shadow {
+  -webkit-box-shadow: 7px 9px 10px -3px rgba(140,136,140,1);
+  -moz-box-shadow: 7px 9px 10px -3px rgba(140,136,140,1);
+  box-shadow: 7px 9px 10px -3px rgba(140,136,140,1);
+}
+
 @mixin inline-block {
   display:-moz-inline-stack;
   display:inline-block;
@@ -18,4 +28,9 @@ mixins
   background: -o-linear-gradient(top, #f8efe0 0%, #d5a951 100%);
   background: -ms-linear-gradient(top, #f8efe0 0%, #d5a951 100%);
   background: linear-gradient(top, #f8efe0 0%, #d5a951 100%);
+}
+
+@mixin responsive-img {
+  width: 100%;
+  height: auto;
 }
