@@ -7,3 +7,11 @@ Starter Theme 2.1
 - gitignore and notes files
 - updated normailize to 3.0.3 from 3.0.2
 - added bootstrap 3 mobile first media queries into _media_queries.scss
+
+Starter Theme 2.2
+- 5 debug presets in mixins
+- footer presets in _styles.css
+- removed <div id="main_content"> to <main role="main">
+- updated screenshot.png to new specs
+- added fonts folder
+- added experimental list-block mixin

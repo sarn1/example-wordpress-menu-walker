@@ -7,11 +7,22 @@ Style
   text-align:center;
 }
 
+._clear {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
 body {
   font-family: $font-stack;
+  font-size: $font-size;
+  line-height: $line-height;
 
   a {
     color: $link-color;
+    text-decoration: none;
   }
 
   h1 {
@@ -28,10 +39,14 @@ body {
     @include responsive-img;
   }
 
-  #content_body {
+  main {
     max-width: $max-width;
     margin: auto;
 
     @include debug;
+  }
+
+  footer {
+    text-align: center;
   }
 }

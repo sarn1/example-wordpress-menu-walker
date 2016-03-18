@@ -1,3 +1,18 @@
 ==========
 NOTES
 ==========
+
+==========
+TODO
+==========
+- google analytics
+- security plugins to hide
+- change email in settings
+- delete if necessary functions.php widgetareas
+
+==========
+PLUGINS
+==========
+- automatic plugin update
+- backup buddy
+- media replace

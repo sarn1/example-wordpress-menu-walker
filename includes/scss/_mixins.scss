@@ -4,7 +4,22 @@ mixins
 =============== */
 
 @mixin debug {
-  border: thin solid #1EAEDB;
+  border: thin solid #FF0000; /* red */
+}
+@mixin debug1 {
+  border: thin solid #7FFF00; /* neon green */
+}
+@mixin debug2 {
+  border: thin solid #FF1493; /* deep pink */
+}
+@mixin debug3 {
+  border: thin solid #FFA500; /* orange */
+}
+@mixin debug4 {
+  border: thin solid #9932CC; /* purple */
+}
+@mixin debug5 {
+  border: thin solid #00FFFF; /* sky blue */
 }
 
 @mixin box-shadow {
@@ -28,6 +43,25 @@ mixins
   background: -o-linear-gradient(top, #f8efe0 0%, #d5a951 100%);
   background: -ms-linear-gradient(top, #f8efe0 0%, #d5a951 100%);
   background: linear-gradient(top, #f8efe0 0%, #d5a951 100%);
+}
+
+@mixin list-blocks($class:list_blocks) {
+  ul.#{$class} {
+    list-style-type: none;
+    margin: 40px 0 55px 0;
+    padding: 0;
+  }
+
+  ul.#{$class} li {
+    max-width: 225px;
+    width: 100%;
+    margin: 0 4px;
+    @include inline-block();
+
+    &:last-child {
+      margin-right:0;
+    }
+  }
 }
 
 @mixin responsive-img {
