@@ -15,3 +15,6 @@ Starter Theme 2.2
 - updated screenshot.png to new specs
 - added fonts folder
 - added experimental list-block mixin
+- _clear class created
+
+Starter Theme 2.2.1
