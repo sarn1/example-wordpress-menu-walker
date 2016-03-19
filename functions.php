@@ -216,5 +216,3 @@ add_action('publish_post', 'add_category_automatically1');
 
 
 */
-
-?>
