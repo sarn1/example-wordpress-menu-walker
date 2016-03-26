@@ -19,5 +19,21 @@ Starter Theme 2.2
 
 Starter Theme 2.2.1
 - Remove HTML5PrintShiv
-- Updated HTML5Shivto 3.6.2 > 3.7.3
+- Updated HTML5Shiv to 3.6.2 > 3.7.3
 - Remove trailing ? in function.php
+
+Starter Theme 2.2.2
+- Remove trailing ? in sidebar.php
+- Correct <article> schema in index.php
+- Added <aside> to index.php
+- Set default $font-color
+- Default navigation styles
+- Default headline h1-h5
+- Add no-space mixin
+
+
+==========
+TODO
+==========
+- Nest nav styles
+- 404 page template?  Add graphics?

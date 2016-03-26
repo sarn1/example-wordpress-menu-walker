@@ -1,7 +1,11 @@
 ==========
 NOTES
 ==========
+<link href='https://fonts.googleapis.com/css?family=Raleway:300,300italic,600,600italic,400italic,400' rel='stylesheet' type='text/css'>
+font-family: 'Raleway', sans-serif;Raleway', Verdana, Geneva, sans-serif;
 
+http://minifycode.com/html-minifier/
+http://unminify.com/
 ==========
 TODO
 ==========
@@ -9,6 +13,9 @@ TODO
 - security plugins to hide
 - change email in settings
 - delete if necessary functions.php widgetareas
+- style custom fonts and colors into tinymce
+- final css compression
+- check 404
 
 ==========
 PLUGINS

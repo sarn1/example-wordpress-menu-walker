@@ -64,6 +64,12 @@ mixins
   }
 }
 
+@mixin no-space {
+  font-size:0;
+  line-height:0;
+  letter-spacing: 0;
+}
+
 @mixin responsive-img {
   width: 100%;
   height: auto;
