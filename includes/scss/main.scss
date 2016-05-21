@@ -3,7 +3,7 @@ Theme Name: Starter-Theme
 Description: Webvolution Starter Theme
 Author: Webvolution LLC
 Author URI: http://www.webvolutionchicago.com
-Version: 2.2.2
+Version: 2.3
 */
 
 /*
@@ -37,6 +37,7 @@ http://www.freefontconverter.com/
 
 //3rd party
 @import 'normalize';
+@import 'skeleton';
 
 @import 'wordpress';
 @import 'config';

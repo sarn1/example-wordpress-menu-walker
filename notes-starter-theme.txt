@@ -31,9 +31,15 @@ Starter Theme 2.2.2
 - Default headline h1-h5
 - Add no-space mixin
 
+Starter Theme 2.3
+- Git ignore enhancements
+- Notes changes
+- Header/navigation style clean-up
+- EMS capability
+- Added skeleton framework
+
 
 ==========
 TODO
 ==========
-- Nest nav styles
 - 404 page template?  Add graphics?

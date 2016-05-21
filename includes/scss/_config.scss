@@ -11,23 +11,26 @@ $primary-color:         #dbeab3; /* green */
 $secondary-color:       #cce5ff; /* blue */
 $ternary-color:         #f3dad0; /* red */
 
-$font-size:				16px;
-$line-height:			20px;
+$font-size-origin:      16px;
+$line-height-origin:    20px;
 
-$font-size-sm:			14px;
-$line-height-sm:		20px;
+$font-size-sm:			0.75em;   //12
+$line-height-sm:		1em;
 
-$font-size-md:          25px;
-$line-height-md:        20px;
+$font-size:				1em;
+$line-height:			1em;
 
-$font-size-lg:          32px;
-$line-height-lg:        38px;
+$font-size-md:          1.25em;   //20
+$line-height-md:        1em;
 
-$font-size-xlg:         36px;
-$line-height-xlg:       38px;
+$font-size-lg:          1.5em;    //24
+$line-height-lg:        1em;
+
+$font-size-xlg:         2em;      //32
+$line-height-xlg:       1em;
 
 $font-stack:            Arial, Helvetica, sans-serif;
 $font-stack-2:         'Raleway', Verdana, Geneva, sans-serif;
 
-$menu-max-width:        600px;
+$menu-max-width:        $max-width;
 $sub-menu-max-width:    200px;

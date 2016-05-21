@@ -16,6 +16,7 @@ TODO
 - style custom fonts and colors into tinymce
 - final css compression
 - check 404
+- notes suffix change
 
 ==========
 PLUGINS

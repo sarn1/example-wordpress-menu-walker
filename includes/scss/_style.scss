@@ -12,31 +12,39 @@ Style
 }
 
 body {
-  font-family: $font-stack;
-  font-size: $font-size;
-  color: $font-color;
-  line-height: $line-height;
 
-  a {
+  //reset skeleton
+  font-family: $font-stack;
+  font-size: $font-size-origin;
+  line-height: $line-height-origin;
+  color: $font-color;
+
+  a, a:hover {
+    font-size: $font-size;
     color: $link-color;
     text-decoration: none;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: $font-stack-2;
+    font-family: $font-stack;
     margin:0;
     padding:0;
   }
 
-    h1 {
-      font-size: $font-size-lg;
-      line-height: $line-height-lg;
-    }
+  h1 {
+    font-size: $font-size-lg;
+    line-height: $line-height-lg;
+  }
 
-    h2 {
-      font-size: $font-size-md;
-      line-height: $line-height-md;
-    }
+  h2 {
+    font-size: $font-size-md;
+    line-height: $line-height-md;
+  }
+
+  h3 {
+    font-size: 1.05em;
+    line-height: 1em;
+  }
 
   img {
     @include responsive-img;
@@ -44,16 +52,23 @@ body {
 
   //head
   header {
+    text-align:center;
+
     //nav
     nav {
       max-width: $max-width;
       margin:auto;
       width:100%;
       text-align: center;
+      background-color: $secondary-color;
       @include debug2;
 
       .current-menu-parent>a, .current-menu-item a {
-        color: $secondary-color;
+        color: $primary-color;
+
+        &:hover {
+          color: $secondary-color;
+        }
       }
     }
 
@@ -64,80 +79,83 @@ body {
       width:100%;
       @include debug5;
       line-height: 40px;
-    }
 
-    nav ul li {
-      margin: 0;
-      @include inline-block;
-      position: relative;
-    }
+      li {
+        margin: 0;
+        @include inline-block;
+        position: relative;
 
-    nav ul li a {
-      @include inline-block;
-      line-height: $line-height;
-      padding:  0 15px;
-      color: $link-color;
-      text-decoration: none;
-    }
+        span {
+          display: none;
+          width:100%;
+        }
 
-    nav ul li a:hover {
-      cursor: pointer;
-      background-color: $primary-color;
-    }
+        a {
+          @include inline-block;
+          line-height: $line-height;
+          padding:  0 15px;
+          color: $secondary-color;
+          text-decoration: none;
 
-    /*sub menu*/
-    nav ul ul {
-      opacity: 0;
-      filter: alpha(opacity=0);
-      width: $sub-menu-max-width;
-      position: absolute;
-      top:100%;
-      left: 0;
-      z-index: 999999;
-      height: 0px;
-      overflow: hidden;
-      min-width: 100%;
-      padding: 10px 5px;
+          &:hover {
+            cursor: pointer;
+            background-color: $primary-color;
+            color: $secondary-color;
+          }
+        }
+
+        &:hover {
+          ul {
+            opacity: 10;
+            filter: alpha(opacity=100);
+            height: auto;
+            overflow: auto;
+            display: block;
+          }
+
+          &> a {
+            background: $primary-color;
+          }
+        }
 
 
-      -webkit-transition: opacity 0.4s ease-out;
-      -moz-transition: opacity 0.4s ease-out;
-      -o-transition: opacity 0.4s ease-out;
-      -ms-transition: opacity 0.4s ease-out;
-      transition: opacity 0.4s ease-out;
+        /* submenu */
+        ul {
+          opacity: 0;
+          filter: alpha(opacity=0);
+          width: $sub-menu-max-width;
+          position: absolute;
+          top:100%;
+          left: 0;
+          z-index: 999999;
+          height: 0px;
+          overflow: hidden;
+          min-width: 100%;
+          padding: 10px 5px;
 
-      @include box-shadow;
-    }
+          -webkit-transition: opacity 0.4s ease-out;
+          -moz-transition: opacity 0.4s ease-out;
+          -o-transition: opacity 0.4s ease-out;
+          -ms-transition: opacity 0.4s ease-out;
+          transition: opacity 0.4s ease-out;
 
-    nav ul li span {
-      display: none;
-      width:100%;
-    }
+          @include box-shadow;
 
-    nav ul li:hover ul {
-      opacity: 10;
-      filter: alpha(opacity=100);
-      height: auto;
-      overflow: auto;
-      display: block;
-    }
+          li {
+            float: none;
+            display:block;
+            margin-bottom: 5px;
 
-    nav ul ul li {
-      float: none;
-      display:block;
-      margin-bottom: 5px;
-    }
-
-    nav ul ul li a {
-      display: block;
-      line-height: $line-height;
-      text-transform: none;
-      position: relative;
-      z-index: 999999;
-    }
-
-    nav ul li:hover > a {
-      background: $primary-color;
+            a {
+              display: block;
+              line-height: $line-height;
+              text-transform: none;
+              position: relative;
+              z-index: 999999;
+            }
+          }
+        }
+      }
     }
   }
 
@@ -147,6 +165,10 @@ body {
     margin: auto;
 
     @include debug;
+
+    article {
+      padding: 25px 10px;
+    }
   }
 
   //footer
