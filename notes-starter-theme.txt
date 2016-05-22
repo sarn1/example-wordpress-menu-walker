@@ -36,10 +36,14 @@ Starter Theme 2.3
 - Notes changes
 - Header/navigation style clean-up
 - EMS capability
-- Added skeleton framework
-
+- Added Skeleton framework
+- Expanded Skeleton reset
+- Minor 404 styling
+- Contact Form 7 styling
 
 ==========
 TODO
 ==========
 - 404 page template?  Add graphics?
+- menu hover and dropdown delays
+- scss lib add on

@@ -11,6 +11,12 @@ Style
   visibility: hidden;
 }
 
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 body {
 
   //reset skeleton
@@ -29,6 +35,7 @@ body {
     font-family: $font-stack;
     margin:0;
     padding:0;
+    letter-spacing:0;
   }
 
   h1 {
@@ -46,9 +53,45 @@ body {
     line-height: 1em;
   }
 
+  h1 + table, h2 + table, h3 + table {
+    margin-top: -15px;
+  }
+
+  p + table {
+    margin-top: -25px;
+  }
+
   img {
     @include responsive-img;
   }
+
+
+  input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="text"]:focus, input[type="tel"]:focus, input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
+    border-color: $secondary-color;
+  }
+
+  input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], textarea, select {
+    color: $primary-color;
+  }
+
+  input, textarea, select, fieldset {
+    margin-bottom: 1em;
+  }
+
+  pre, blockquote, dl, figure, table, p, ul, ol, form {
+    margin-bottom: 1em;
+  }
+
+  /* contactform7 */
+  .ajax-loader {
+    max-width: 16px;
+  }
+
+  span.wpcf7-not-valid-tip {
+    color: #590000;
+  }
+
+
 
   //head
   header {
@@ -65,10 +108,7 @@ body {
 
       .current-menu-parent>a, .current-menu-item a {
         color: $primary-color;
-
-        &:hover {
-          color: $secondary-color;
-        }
+        font-weight:bold;
       }
     }
 
@@ -92,7 +132,6 @@ body {
 
         a {
           @include inline-block;
-          line-height: $line-height;
           padding:  0 15px;
           color: $secondary-color;
           text-decoration: none;
@@ -100,7 +139,8 @@ body {
           &:hover {
             cursor: pointer;
             background-color: $primary-color;
-            color: $secondary-color;
+            color: $ternary-color;
+            font-weight:normal;
           }
         }
 
@@ -173,6 +213,14 @@ body {
 
   //footer
   footer {
+    margin-top: 25px;
     text-align: center;
+  }
+
+  //404
+  &.error404 {
+    article {
+      text-align:center;
+    }
   }
 }
