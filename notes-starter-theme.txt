@@ -47,3 +47,4 @@ TODO
 - 404 page template?  Add graphics?
 - menu hover and dropdown delays
 - scss lib add on
+- move skeleton and custom styling to new scss file
