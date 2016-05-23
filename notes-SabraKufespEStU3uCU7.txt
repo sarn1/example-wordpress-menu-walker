@@ -17,6 +17,7 @@ TODO
 - final css compression
 - check 404
 - notes suffix change
+- script.min.js url change
 
 ==========
 PLUGINS
