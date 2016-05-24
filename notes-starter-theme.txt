@@ -41,6 +41,7 @@ Starter Theme 2.3
 - Minor 404 styling
 - Contact Form 7 styling
 - 404 as partials
+- pqd() added
 
 ==========
 TODO

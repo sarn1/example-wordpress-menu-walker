@@ -216,3 +216,39 @@ add_action('publish_post', 'add_category_automatically1');
 
 
 */
+
+if ( !function_exists('pq') )
+{
+  function pq($str, $return=false, $more=true)
+  {
+	ini_set('memory_limit', -1); // lol
+	ob_start();
+	echo '><pre>';
+	if ( $more )
+	  var_dump($str);
+	else
+	  print_r($str);
+	echo '</pre>';
+	$out = preg_replace(
+	  [
+		"/=>\n\s*/",
+		'/(\s)NULL(\s)/',
+		"#\"(https?://|/?/)(.*)\"#",
+	  ],
+	  [
+		" => ",
+		'$1null$2',
+		'"<a href="$1$2">$1$2</a>"',
+	  ],
+	  ob_get_clean()
+	);
+	if ( $return )
+	  return $out;
+	echo $out;
+  }
+  function pqd( $str, $die="", $return=false, $more=true )
+  {
+	pq($str, $return, $more);
+	die($die);
+  }
+}
