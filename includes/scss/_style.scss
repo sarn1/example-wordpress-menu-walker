@@ -61,6 +61,11 @@ body {
     margin-top: -25px;
   }
 
+  hr {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
   img {
     @include responsive-img;
   }
