@@ -140,6 +140,7 @@ body {
           padding:  0 15px;
           color: $secondary-color;
           text-decoration: none;
+          transition: background-color 2s;
 
           &:hover {
             cursor: pointer;

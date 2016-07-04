@@ -10,7 +10,9 @@ $widgetareas = array(
 	'Sidebar', 'Footer'
 );
 
- 
+//turn off toolset types front-end menu
+add_filter('types_information_table', '__return_false');
+
 
 //enable theme features
 add_theme_support('menus'); //enable menus
@@ -19,7 +21,6 @@ add_theme_support( 'title-tag' ); //enable title
  
 
 //register nav menus
-
 add_action('init','jet4_register_nav_menus');
 function jet4_register_nav_menus() {
   global $navmenus;
@@ -37,7 +38,6 @@ function jet4_register_nav_menus() {
 
 
 //register widget areas
-
 add_action('init','jet4_register_widget_areas');
 function jet4_register_widget_areas() {
   global $widgetareas;
@@ -55,10 +55,35 @@ function jet4_register_widget_areas() {
   }
 }
 
+//determine if a page is a blog type page - to be used to inject into body class for blog type pages
+function my_blog_page () {
+  //determine if blog type page
+  if (is_home() || is_single() || is_search() || is_archive()) {
+	return true;
+  }
+
+  return false;
+}
+
+// Add specific CSS class by filter
+add_filter( 'body_class', 'my_body_class_names' );
+function my_body_class_names( $classes ) {
+
+  $classes[] ='';
+
+  // add 'class-name' to the $classes array
+  if (my_blog_page()) {
+	$classes[] = 'blog_pages';
+  } elseif (my_find_a_class()) {
+	$classes[] = 'find_a_class_pages';
+  }
+  // return the $classes array
+  return $classes;
+}
+
 
 
 //register theme script
-
 add_action('init','jet4_register_theme_script');
 function jet4_register_theme_script() {
   if ( !is_admin() ) {
