@@ -44,6 +44,7 @@ Starter Theme 2.3
 - pqd() added
 - background transition on dropdown menu
 - blog pages get a body class distinction
+- no follow on footer links back to dev. per SEO rules
 
 ==========
 TODO
