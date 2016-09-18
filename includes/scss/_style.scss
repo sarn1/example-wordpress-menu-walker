@@ -83,8 +83,21 @@ body {
     margin-bottom: 1em;
   }
 
+  ol {
+    li {
+      margin: 0 5px;
+    }
+  }
+
   pre, blockquote, dl, figure, table, p, ul, ol, form {
     margin-bottom: 1em;
+  }
+
+  ul {
+    list-style: disc;
+    li {
+      margin: 0 20px;
+    }
   }
 
   /* contactform7 */
@@ -111,7 +124,7 @@ body {
       background-color: $secondary-color;
       @include debug2;
 
-      .current-menu-parent>a, .current-menu-item a {
+      .current-menu-parent>a, .current_page_parent>a, .current-menu-item a {
         color: $primary-color;
         font-weight:bold;
       }

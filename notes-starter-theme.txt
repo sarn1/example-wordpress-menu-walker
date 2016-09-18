@@ -20,7 +20,7 @@ Starter Theme 2.2
 Starter Theme 2.2.1
 - Remove HTML5PrintShiv
 - Updated HTML5Shiv to 3.6.2 > 3.7.3
-- Remove trailing ? in function.php
+- Remove trailing ? in functions.php
 
 Starter Theme 2.2.2
 - Remove trailing ? in sidebar.php
@@ -46,10 +46,18 @@ Starter Theme 2.3
 - blog pages get a body class distinction
 - no follow on footer links back to dev. per SEO rules
 
+Starter Theme 2.4
+- Git starter script
+- Blog title in footer
+- Integrate FontAwesome
+- Box Shadow, Google Maps, Transition Delay mixin
+- Mixin organization
+- OL, LI styles
+- WYSIWYG tip for paragraphs and line breaks.
+- Fix blog pages get a body class distinction bug
+- Fix functions.php indentation
+
+
 ==========
 TODO
 ==========
-- 404 page template?  Add graphics?
-- menu hover and dropdown delays
-- scss lib add on
-- move skeleton and custom styling to new scss file

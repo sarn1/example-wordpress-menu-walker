@@ -11,8 +11,6 @@ $primary-color:         #dbeab3; /* green */
 $secondary-color:       #cce5ff; /* blue */
 $ternary-color:         #f3dad0; /* red */
 
-$border-color:          #d1d1d1;
-
 $font-size-origin:      16px;
 $line-height-origin:    20px;
 
@@ -30,6 +28,9 @@ $line-height-lg:        1em;
 
 $font-size-xlg:         2em;      //32
 $line-height-xlg:       1em;
+
+$font-size-footer:		0.6875em; //11
+$line-height-footer:	1em;
 
 $font-stack:            Arial, Helvetica, sans-serif;
 $font-stack-2:         'Raleway', Verdana, Geneva, sans-serif;

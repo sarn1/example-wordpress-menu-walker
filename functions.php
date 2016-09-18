@@ -2,12 +2,12 @@
 
 //nav menus
 $navmenus = array(
-	'Main Menu'
+  'Main Menu'
 );
 
 //widget areas
 $widgetareas = array(
-	'Sidebar', 'Footer'
+  'Sidebar', 'Footer'
 );
 
 //turn off toolset types front-end menu
@@ -17,66 +17,66 @@ add_filter('types_information_table', '__return_false');
 //enable theme features
 add_theme_support('menus'); //enable menus
 add_theme_support('post-thumbnails'); //enable post thumbnails
-add_theme_support( 'title-tag' ); //enable title
- 
+add_theme_support('title-tag'); //enable title
+
 
 //register nav menus
-add_action('init','jet4_register_nav_menus');
-function jet4_register_nav_menus() {
+add_action('init', 'jet4_register_nav_menus');
+function jet4_register_nav_menus()
+{
   global $navmenus;
   if (function_exists('register_nav_menus')) {
-	$navmenus_proc = array();
-	foreach($navmenus as $menu) {
-		$key = sanitize_title($menu);
-		$val = $menu;
-		$navmenus_proc[$key] = $val;
-	}
-	register_nav_menus($navmenus_proc);
+    $navmenus_proc = array();
+    foreach ($navmenus as $menu) {
+      $key = sanitize_title($menu);
+      $val = $menu;
+      $navmenus_proc[$key] = $val;
+    }
+    register_nav_menus($navmenus_proc);
   }
 }
 
 
-
 //register widget areas
-add_action('init','jet4_register_widget_areas');
-function jet4_register_widget_areas() {
+add_action('init', 'jet4_register_widget_areas');
+function jet4_register_widget_areas()
+{
   global $widgetareas;
   if (function_exists('register_sidebar')) {
-	foreach ($widgetareas as $widgetarea) {
-	  register_sidebar(array(
-		  'name'          => $widgetarea,
-		  'id'            => sanitize_title($widgetarea),
-		  'before_widget' => '<div id="%1$s" class="widget '.(string)sanitize_title($widgetarea).' %2$s %1$s">',
-		  'after_widget'  => '</div>',
-		  'before_title'  => '<h2>',
-		  'after_title'   => '</h2>'
-	  ));
-	}
+    foreach ($widgetareas as $widgetarea) {
+      register_sidebar(array(
+        'name' => $widgetarea,
+        'id' => sanitize_title($widgetarea),
+        'before_widget' => '<div id="%1$s" class="widget ' . (string)sanitize_title($widgetarea) . ' %2$s %1$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2>',
+        'after_title' => '</h2>'
+      ));
+    }
   }
 }
 
 //determine if a page is a blog type page - to be used to inject into body class for blog type pages
-function my_blog_page () {
+function my_blog_page()
+{
   //determine if blog type page
   if (is_home() || is_single() || is_search() || is_archive()) {
-	return true;
+    return true;
   }
 
   return false;
 }
 
 // Add specific CSS class by filter
-add_filter( 'body_class', 'my_body_class_names' );
-function my_body_class_names( $classes ) {
-
-  $classes[] ='';
-
+add_filter('body_class', 'my_body_class_names');
+function my_body_class_names($classes)
+{
+  $classes[] = '';
   // add 'class-name' to the $classes array
   if (my_blog_page()) {
-	$classes[] = 'blog_pages';
-  } elseif (my_find_a_class()) {
-	$classes[] = 'find_a_class_pages';
+    $classes[] = 'blog_pages';
   }
+
   // return the $classes array
   return $classes;
 }
@@ -84,35 +84,47 @@ function my_body_class_names( $classes ) {
 
 
 //register theme script
-add_action('init','jet4_register_theme_script');
-function jet4_register_theme_script() {
-  if ( !is_admin() ) {
-	wp_register_script('jet4_theme_script',	get_bloginfo('template_directory') . '/includes/scripts.min.js',	array('jquery'));
-	wp_enqueue_script('jet4_theme_script');
+add_action('init', 'jet4_register_theme_script');
+function jet4_register_theme_script()
+{
+  if (!is_admin()) {
+    wp_register_script('jet4_theme_script', get_bloginfo('template_directory') . '/includes/scripts.min.js', array('jquery'));
+    wp_enqueue_script('jet4_theme_script');
 
-	/* optional for JQuery backwards compatibility
-	wp_register_script('jet4_theme_script5',	get_bloginfo('template_directory') . '/includes/jquery-migrate-1.1.0.min.js' );
-	wp_enqueue_script('jet4_theme_script5');
-	*/
+    /* optional for JQuery backwards compatibility
+    wp_register_script('jet4_theme_script5',	get_bloginfo('template_directory') . '/includes/jquery-migrate-1.1.0.min.js' );
+    wp_enqueue_script('jet4_theme_script5');
+    */
 
-	//wp_register_script('jet4_theme_script7',	get_bloginfo('template_directory') . '/includes/bootstrap/js/bootstrap.min.js' );
-	//wp_enqueue_script('jet4_theme_script7');
+    //wp_register_script('jet4_theme_script7',	get_bloginfo('template_directory') . '/includes/bootstrap/js/bootstrap.min.js' );
+    //wp_enqueue_script('jet4_theme_script7');
   }
 }
 
 
-add_action( 'wp_enqueue_scripts', 'prefix_add_my_stylesheet' );
-function prefix_add_my_stylesheet() {
+add_action('wp_enqueue_scripts', 'prefix_add_my_stylesheet');
+function prefix_add_my_stylesheet()
+{
 
   //wp_register_style( 's452-bootstrap', get_bloginfo('template_directory').'/includes/bootstrap/css/bootstrap.min.css' , __FILE__ );
   //wp_enqueue_style( 's452-bootstrap' );
 
-  wp_register_style( 's452-style', get_bloginfo('template_directory').'/style.css' , __FILE__ );
-  wp_enqueue_style( 's452-style' );
+  wp_register_style('s452-style', get_bloginfo('template_directory') . '/style.css', __FILE__);
+  wp_enqueue_style('s452-style');
 
 }
-	
 
+//Adds instruction text after the post title input
+function emersonthis_edit_form_after_title()
+{
+  $tip = '<strong>TIP:</strong> To create a single line break use SHIFT+RETURN. By default, RETURN creates a new paragraph.';
+  echo '<p style="margin-bottom:0;">' . $tip . '</p>';
+}
+
+add_action(
+  'edit_form_after_title',
+  'emersonthis_edit_form_after_title'
+);
 
 /*	TINYMCE
 //http://www.wpexplorer.com/wordpress-tinymce-tweaks/
@@ -196,7 +208,6 @@ require_once('includes/bootstrap/wp_bootstrap_navwalker.php');
 */
 
 
-
 /* BLOG FUNCTIONALITY
 
 //blog commenting 
@@ -242,38 +253,38 @@ add_action('publish_post', 'add_category_automatically1');
 
 */
 
-if ( !function_exists('pq') )
-{
-  function pq($str, $return=false, $more=true)
+if (!function_exists('pq')) {
+  function pq($str, $return = false, $more = true)
   {
-	ini_set('memory_limit', -1); // lol
-	ob_start();
-	echo '><pre>';
-	if ( $more )
-	  var_dump($str);
-	else
-	  print_r($str);
-	echo '</pre>';
-	$out = preg_replace(
-	  [
-		"/=>\n\s*/",
-		'/(\s)NULL(\s)/',
-		"#\"(https?://|/?/)(.*)\"#",
-	  ],
-	  [
-		" => ",
-		'$1null$2',
-		'"<a href="$1$2">$1$2</a>"',
-	  ],
-	  ob_get_clean()
-	);
-	if ( $return )
-	  return $out;
-	echo $out;
+    ini_set('memory_limit', -1); // lol
+    ob_start();
+    echo '><pre>';
+    if ($more)
+      var_dump($str);
+    else
+      print_r($str);
+    echo '</pre>';
+    $out = preg_replace(
+      [
+        "/=>\n\s*/",
+        '/(\s)NULL(\s)/',
+        "#\"(https?://|/?/)(.*)\"#",
+      ],
+      [
+        " => ",
+        '$1null$2',
+        '"<a href="$1$2">$1$2</a>"',
+      ],
+      ob_get_clean()
+    );
+    if ($return)
+      return $out;
+    echo $out;
   }
-  function pqd( $str, $die="", $return=false, $more=true )
+
+  function pqd($str, $die = "", $return = false, $more = true)
   {
-	pq($str, $return, $more);
-	die($die);
+    pq($str, $return, $more);
+    die($die);
   }
 }

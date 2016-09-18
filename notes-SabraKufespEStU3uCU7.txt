@@ -1,6 +1,33 @@
 ==========
 NOTES
 ==========
+
+==========
+START
+==========
+git clone git@github.com:webvolution/starter-theme.git
+
+create new repo in github
+
+git init
+
+git add README.md
+
+git commit -m "first commit"
+
+git remote -v
+
+git remote set-url origin git@github.com:webvolution/xxx.git
+
+git push -u origin master
+
+Codekit > Browser Refreshing > External Server Require
+External Server Address = your url.local
+
+cd website/my website/wp-content/themes/my theme
+
+==========
+
 <link href='https://fonts.googleapis.com/css?family=Raleway:300,300italic,600,600italic,400italic,400' rel='stylesheet' type='text/css'>
 font-family: 'Raleway', sans-serif;Raleway', Verdana, Geneva, sans-serif;
 
@@ -11,6 +38,7 @@ TODO
 ==========
 - google analytics
 - security plugins to hide
+- plugins to list
 - change email in settings
 - delete if necessary functions.php widgetareas
 - style custom fonts and colors into tinymce

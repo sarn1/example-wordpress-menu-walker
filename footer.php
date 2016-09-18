@@ -2,7 +2,7 @@
 
 <footer>
     <?php dynamic_sidebar('Footer'); ?>
-    <p class="copyright">Copyright &copy;<?php echo date("Y"); ?> All rights reserved. <a rel="nofollow" href="http://www.webvolutionchicago.com" target="_blank">Designed by Webvolution</a></p>
+    <p class="copyright">&copy;<?php echo date("Y"); ?> <?php  echo get_bloginfo();  ?>. All rights reserved. <a rel="nofollow" href="http://www.webvolutionchicago.com" target="_blank">Designed by Webvolution</a></p>
 </footer>
 
 <script type="text/javascript"><?php
