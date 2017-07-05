@@ -60,7 +60,7 @@ Feel free to uncomment some of the code that is commented for some surprise feat
 
 ## Screenshots
 Desktop:
-![Desktop](//github.com/sarn1/example-wordpress-menu-walker/blob/master/doc/desktop.png)
+![Desktop](https://github.com/sarn1/example-wordpress-menu-walker/blob/master/doc/desktop.png)
 Mobile:
 ![Mobile](//github.com/sarn1/example-wordpress-menu-walker/blob/master/doc/mobile.png)
 Menu in WP Admin:
