@@ -1,10 +1,5 @@
 # Created by https://www.gitignore.io/api/codekit,osx,phpstorm,wordpress
 
-# touch .gitignore
-# git rm -r --cached .
-# git add .
-# git commit -m ".gitignore is now working"
-
 ### CodeKit ###
 # General CodeKit files to ignore
 .sass-cache/
