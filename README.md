@@ -1,5 +1,5 @@
 # Example WordPress Menu-Walker
-A base template to demo a basic WP menu-walker in action.  This is not production code, for learning only.
+A base template to demo a basic WP menu-walker in action.  This is not production code, for learning only.  Solves the problem of tying in the menu created in WP with a responsive navigation capable of showing dropdown boxes.
 ## Dependencies
 - WordPress
 - Bootstrap
